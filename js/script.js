@@ -10,7 +10,22 @@ const worldtimeapiFetch = function (url) {
   fetch(url)
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
+      console.log(res);}
+    )
+}
+
+
+function setSelectedTimeZone() {
+  //Worldtimeapifetch og dropdown.value = hvilket land og by som blev valgt
+
+  //Logik for display af tid - vet noget localdatetime +utc_offset attribut (kan det udhentes fra datetime?)
+  //Logik for display af timezone location nedenfor -se html
+}
+
+
+const selectChoice = document.getElementById('dropdown');
+
+selectChoice.addEventListener('change', setSelectedTimeZone);
       /*{
   "abbreviation": "CET",
   "client_ip": "87.59.14.119",
@@ -30,6 +45,4 @@ const worldtimeapiFetch = function (url) {
         }*/
 
       /*TODO: lav passende attributter ud fra de markerede JSON værdier som kan manipulerer med klokken  */
-      /* Altså vælg tidszone fra drop down, og set uret.
-    });
-};
+      /* Altså vælg tidszone fra drop down, og set uret.*/
