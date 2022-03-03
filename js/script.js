@@ -52,8 +52,13 @@ function getCity(timezone) {
   const startFromSlashString = timezone.indexOf('/')+1;
   const endString = timezone.length;
 
-  return timezone.substring(startFromSlashString, endString);
+  const city = timezone.substring(startFromSlashString, endString);
+  const replaced = city.replace("_", " ");
+
+  return replaced;
 }
+
+worldtimeapiFetch(url + "Europe/Copenhagen");
 
 /*{
 "abbreviation": "CET",
